@@ -1,119 +1,36 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
+      <header className='bg-blue-400 h-16 flex justify-center items-center w-full border-black border-2'>
+        <p className='text-center'>
+          Sebastian Medina
+        </p>
+      </header>
+      <div className='bg-amber-50 flex justify-between px-48'>
+        <div className='flex-col flex justify-center items-baseline gap-8'>
+          <h1 className='text-4xl font-bold'>
+            Sistema web para Gestinar el inventario, ventas <br/>
+            y prediccion de stock para una Ferreteria
+          </h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Solución orientada a optimizar el control de productos, registrar ventas, apoyar la reposición y habilitar ventas online.
           </p>
+          <div className='flex gap-4'>
+            <a href='https://github.com/SebaMD/actividad_2_lab_TDD' className='bg-blue-700 px-4 py-2 border-2 rounded-md hover:bg-red-500 transition-all hover:scale-110 text-white shadow-lg'> {/*la a se usa para enlaces*/}
+              Ir al proyecto
+            </a>
+            <a className='bg-blue-300 px-4 py-2 border-2 rounded-md hover:bg-red-500 transition-all hover:scale-110 text-white shadow-lg'>
+              Ver funcionalidades
+            </a>
+          </div>
         </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        <img src={heroImg} alt="logo" />
+      </div>
     </>
   )
 }
