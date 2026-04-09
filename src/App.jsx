@@ -1,26 +1,33 @@
-import heroImg from './assets/ilustracion_inventario.webp'
+import herramientasBg from './assets/Herramientas.png'
+import herramientaLowerBg from './assets/ferreteria.jpg'
 import { MdInventory, MdAnalytics } from "react-icons/md";
-import { FaCogs } from "react-icons/fa";
+import { FaCogs, FaShoppingCart, FaBrain } from "react-icons/fa";
 import { BsCartX } from "react-icons/bs";
 
 function App() {
 
   return (
     <>
-      <header className='bg-blue-600 h-16 flex justify-center items-center w-full border-black border-b-2 border-b-blue-700'>
-        <p className='text-center font-bold text-lg '>
-          Sebastian Medina
+      <header className='bg-blue-700 h-16 flex justify-center items-center w-full border-black border-b-2 border-b-blue-700'>
+        <p className='text-center font-bold text-2xl bg-linear-to-r from-yellow-400 via-gray-550 to-white bg-clip-text text-transparent'>
+          FYF Comercializadora
         </p>
       </header>
 
-      <body className='bg-linear-to-b from-black via-sky-950 to-blue-950'>
-        <div className='text-white flex justify-between px-48 gap-12 py-24'>
-          <div className='flex-col flex justify-center items-baseline gap-8'>
-            <h1 className='text-4xl font-bold'>
+      <div className='bg-linear-to-b from-black via-sky-950 to-blue-950'>
+        <div
+          className='text-white flex justify-between px-48 gap-12 py-64 bg-cover bg-center mask-b-from-50% mask-b-to-100%'
+          style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(${herramientasBg})` }}
+        >
+          <div className='w-1/2 flex items-start -mt-10'>
+            <h1 className='text-5xl font-bold leading-tight'>
               Sistema web para gestionar el inventario, ventas  
               y predicción de stock para una ferretería
             </h1>
-            <p>
+          </div>
+
+          <div className='w-1/2 flex flex-col justify-start -mt-3 gap-8'>
+            <p className='text-xl leading-8'>
               Solución orientada a optimizar el control de productos, registrar ventas, apoyar la reposición y habilitar ventas online.
             </p>
             <div className='flex gap-4'>
@@ -32,17 +39,16 @@ function App() {
               </a>
             </div>
           </div>
-          <img src={heroImg} alt="logo" className='w-110 rounded-2xl'/>
         </div>
 
-        <div className='text-center border-t-2 border-t-gray-700 py-12 px-48 gap-8 mt-8'>
+        <div className='text-center py-12 px-48 gap-8 mt-8'>
           <h2 className='text-white text-3xl font-bold mb-4'>Problemas en el control de stock y ventas en ferreterías</h2>
           <p className='text-gray-300 max-w-xl mx-auto text-center'>La ferretería no cuenta con un sistema eficiente para controlar su inventario y ventas. Esto genera errores, falta de información y pérdidas económicas, además de limitar su crecimiento al no tener ventas online.</p>
 
           <div className='text-start flex flex-col flex-wrap gap-4 mt-8'>
-            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
               <span>
-                <MdInventory className='size-8 text-blue-800'/>
+                <MdInventory className='size-8 text-red-800'/>
               </span>
               <div>
                 <h3 className='text-white text-lg font-semibold flex flex-row gap-4 mb-2'>
@@ -54,9 +60,9 @@ function App() {
               </div>
             </div>
 
-            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
                 <span>
-                  <MdAnalytics className='size-8 text-blue-800'/>
+                  <MdAnalytics className='size-8 text-red-800'/>
                 </span>
                 <div>
                   <h3 className='text-white text-lg font-semibold flex flex-row gap-4 mb-2'>
@@ -68,9 +74,9 @@ function App() {
                 </div>
             </div>
 
-            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
               <span>
-                <FaCogs className='size-8 text-blue-800'/>
+                <FaCogs className='size-8 text-red-800'/>
               </span>
               <div>
                 <h3 className="text-white text-lg font-semibold flex flex-row gap-4 mb-2">
@@ -82,9 +88,9 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
               <span>
-                <BsCartX className='size-8 text-blue-800'/>
+                <BsCartX className='size-8 text-red-800'/>
               </span>
               <div>
                 <h3 className="text-white text-lg font-semibold flex flex-row gap-4 mb-2">
@@ -98,86 +104,77 @@ function App() {
           </div>
         </div>
 
-        <div className='text-white flex justify-between border-t-2 border-t-gray-700 px-60 gap-12 py-8'>
-          <img src={heroImg} alt="logo" className='w-110 rounded-3xl py-4'/>
-          <div className='text-center py-12 mt-8'>
-            <h2 className='text-white text-3xl font-bold mb-4'>Solución propuesta</h2>
-            <p className='text-gray-300 max-w-xl mx-auto text-center'>Se propone el desarrollo de un sistema web orientado a la gestión de inventario y ventas para una ferretería, diseñado para optimizar los procesos del negocio y mejorar el control de stock. La solución permitirá visualizar información en tiempo real, analizar datos de ventas y predecir la reposición de productos, facilitando la toma de decisiones. Además, incorporará un canal de ventas online, aumentando el alcance y competitividad del negocio.</p>
+        <div
+          className='text-white flex flex-row justify-center border-t-2 border-t-gray-700 px-24 py-32 bg-cover bg-center mask-y-from-85% mask-y-to-100%'
+          style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url(${herramientaLowerBg})` }}
+        >
+          <div className='text-center py-12 mt-8 flex flex-col justify-center'>
+            <h2 className='text-white text-4xl font-bold'>Aqui lo solucionamos</h2>
+            <p className='text-gray-300 max-w-xl mx-auto text-center py-4'>Se propone Un sistema web que permite gestionar inventario, ventas y stock de manera eficiente, automatizando procesos, mejorando la toma de decisiones y permitiendo la venta online para que no te vuelvan a ocurrir estos problemas.</p>
+
+            <div className='text-start grid grid-cols-2 mt-8 py-8 px-48 gap-8'>
+              <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+                <span>
+                  <MdInventory className='size-8 text-blue-800'/>
+                </span>
+                <div>
+                  <h3 className='text-white text-lg font-semibold flex flex-row gap-4 mb-2'>
+                    Control de inventario en tiempo real
+                  </h3>
+                  <p className='text-gray-300'>
+                    Permite conocer la disponibilidad de productos de forma precisa y actualizada, evitando quiebres de stock o sobreinventario.
+                  </p>
+                </div>
+              </div>
+
+              <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+                <span>
+                  <MdAnalytics className='size-8 text-blue-800'/>
+                </span>
+                <div>
+                  <h3 className='text-white text-lg font-semibold flex flex-row gap-4 mb-2'>
+                    Análisis de ventas y Predicción de stock
+                  </h3>
+                  <p className='text-gray-400'>
+                    Entrega información clara sobre productos más vendidos y comportamiento de compra, facilitando la toma de decisiones, sugiriendo reposiciones y anticipando la demanda de productos.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+                <span>
+                  <FaCogs className='size-8 text-blue-800'/>
+                </span>
+                <div>
+                  <h3 className="text-white text-lg font-semibold flex flex-row gap-4 mb-2">
+                    Automatización de procesos
+                  </h3>
+                  <p className="text-gray-400">
+                    Reduce tareas manuales y errores, mejorando la eficiencia operativa del negocio.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+                <span>
+                  <FaShoppingCart className='size-8 text-blue-800'/>
+                </span>
+                <div>
+                  <h3 className="text-white text-lg font-semibold flex flex-row gap-4 mb-2">
+                    Ventas online
+                  </h3>
+                  <p className="text-gray-400">
+                    Incorpora una plataforma digital para ampliar el alcance del negocio y aumentar las oportunidades de venta.
+                  </p>
+                </div>
+              </div>
+
+            </div>
           </div>
+          
         </div>
 
-        <div className='text-start grid grid-cols-2 mt-8 py-12 px-48 gap-4'>
-          <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
-            <span>
-              <MdInventory className='size-8 text-blue-800'/>
-            </span>
-            <div>
-              <h3 className='text-white text-lg font-semibold flex flex-row gap-4 mb-2'>
-                Control de inventario en tiempo real
-              </h3>
-              <p className='text-gray-400'>
-                Permite conocer la disponibilidad de productos de forma precisa y actualizada, evitando quiebres de stock o sobreinventario.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
-            <span>
-              <MdAnalytics className='size-8 text-blue-800'/>
-            </span>
-            <div>
-              <h3 className='text-white text-lg font-semibold flex flex-row gap-4 mb-2'>
-                Análisis de ventas
-              </h3>
-              <p className='text-gray-400'>
-                Entrega información clara sobre productos más vendidos y comportamiento de compra, facilitando la toma de decisiones.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
-            <span>
-              <FaCogs className='size-8 text-blue-800'/>
-            </span>
-            <div>
-              <h3 className="text-white text-lg font-semibold flex flex-row gap-4 mb-2">
-                Automatización de procesos
-              </h3>
-              <p className="text-gray-400">
-                Reduce tareas manuales y errores, mejorando la eficiencia operativa del negocio.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
-            <span>
-              <BsCartX className='size-8 text-blue-800'/>
-            </span>
-            <div>
-              <h3 className="text-white text-lg font-semibold flex flex-row gap-4 mb-2">
-                Ventas online
-              </h3>
-              <p className="text-gray-400">
-                Incorpora una plataforma digital para ampliar el alcance del negocio y aumentar las oportunidades de venta.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-black border col-span-2 border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
-            <span>
-              <BsCartX className='size-8 text-blue-800'/>
-            </span>
-            <div>
-              <h3 className="text-white text-lg font-semibold flex flex-row gap-4 mb-2">
-                Predicción de stock
-              </h3>
-              <p className="text-gray-400">
-                Sugiere reposiciones basadas en el historial de ventas, anticipando la demanda de productos.
-              </p>
-            </div>
-          </div>
-        </div>
-      </body>
+      </div>
     </>
   )
 }
