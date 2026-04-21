@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <header className='bg-black h-16 flex justify-center items-center w-full border-black border-b-2 border-b-black'>
-        <p className='text-center font-bold text-2xl bg-linear-to-r from-blue-700 via-gray-550 to-white bg-clip-text text-transparent'>
+        <p className='text-center font-bold text-2xl bg-linear-to-r from-blue-700 via-gray-550 to-white bg-clip-text text-transparent '>
           FYF Comercializadora
         </p>
       </header>
@@ -20,20 +20,20 @@ function App() {
       <div className='bg-linear-to-b from-black from-0% via-sky-950 via-75% to-black to-100%'>
         <div
           id='inicio'
-          className='text-white flex flex-col justify-center items-center px-48 gap-12 py-54 bg-cover bg-center mask-b-from-58% mask-b-to-100%'
+          className='text-white flex flex-wrap items-center justify-center px-6 md:px-48 py-20 md:py-64 gap-8 md:gap-12 bg-cover bg-center mask-b-from-30% mask-b-to-100%'
           style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(${herramientasBg})` }}
         >
-          <div className='flex items-start'>
-            <h1 className='text-5xl font-bold leading-tight'>
+          <div className='w-full lg:w-1/2 text-center'>
+            <h1 className='text-5xl font-bold leading-tight lg:text-4xl md:text-2xl sm:text-lg xs:text-xl'>
               Optimiza la gestión de tu ferretería
             </h1>
           </div>
 
-          <div className='flex flex-col justify-start -mt-3 gap-8'>
+          <div className='flex flex-wrap gap-4 justify-center'>
             <p className='text-xl leading-8 '>
               Controla tu inventario en tiempo real, registra ventas y anticipa la reposición de productos, integrando además ventas online.
             </p>
-            <div className='flex gap-4 justify-start items-center pl-66'>
+            <div className='flex flex-col lg:flex-row gap-4 justify-center items-center'>
               <a href='#problematica' className='font-bold bg-blue-700 px-4 py-2 border-2 border-blue-700 rounded-md hover:bg-red-500 transition-all hover:scale-110 text-white shadow-lg'> {/*la a se usa para enlaces*/}
                 Problematica
               </a>
@@ -50,12 +50,12 @@ function App() {
           </div>
         </div>
 
-        <div id='problematica' className='text-center py-12 px-48 gap-8 mt-28'>
+        <div id='problematica' className='text-center py-12 px-6 md:px-16 lg:px-48 gap-8 mt-28'>
           <h2 className='text-white text-3xl font-bold mb-4'>Problemas en la gestión de inventario y ventas por uso limitado de sistemas</h2>
           <p className='text-gray-300 max-w-xl mx-auto text-center'>La gestión actual de la ferretería presenta deficiencias en el control de inventario y ventas, con procesos manuales que generan errores, pérdida de información y limitan su crecimiento.</p>
 
           <div className='text-start flex flex-col flex-wrap gap-4 mt-8'>
-            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg'>
               <span>
                 <MdInventory className='size-8 text-red-800'/>
               </span>
@@ -69,7 +69,7 @@ function App() {
               </div>
             </div>
 
-            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+            <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg'>
                 <span>
                   <MdAnalytics className='size-8 text-red-800'/>
                 </span>
@@ -83,7 +83,7 @@ function App() {
                 </div>
             </div>
 
-            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg">
               <span>
                 <FaCogs className='size-8 text-red-800'/>
               </span>
@@ -97,7 +97,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+            <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-red-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg">
               <span>
                 <BsCartX className='size-8 text-red-800'/>
               </span>
@@ -115,15 +115,15 @@ function App() {
 
         <div
           id='solucion'
-          className='text-white flex flex-row justify-center border-t-2 border-t-gray-700 px-24 py-32 bg-cover bg-center mask-y-from-75% mask-y-to-100% mt-30'
+          className='text-white flex flex-row justify-center border-t-2 border-t-gray-700 px-6 md:px-16 lg:px-24 py-32 bg-cover bg-center mask-y-from-75% mask-y-to-100% mt-30'
           style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.70)), url(${Fondo})` }}
         >
           <div className='text-center py-12 flex flex-col justify-center'>
             <h2 className='text-white text-4xl font-bold'>Solución propuesta</h2>
             <p className='text-gray-300 max-w-xl mx-auto text-center py-4'>Se propone el desarrollo de un sistema web orientado a optimizar la gestión de inventario y ventas en la ferretería, permitiendo mejorar el control de productos y apoyar la toma de decisiones mediante el uso de información.</p>
 
-            <div className='text-start grid grid-cols-2 mt-8 py-8 px-24 gap-5'>
-              <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+            <div className='text-start grid grid-cols-1 md:grid-cols-2 mt-8 py-8 px-0 md:px-12 lg:px-24 gap-5'>
+              <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg'>
                 <span>
                   <MdInventory className='size-8 text-blue-800'/>
                 </span>
@@ -137,7 +137,7 @@ function App() {
                 </div>
               </div>
 
-              <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg'>
+              <div className='bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg'>
                 <span>
                   <MdAnalytics className='size-8 text-blue-800'/>
                 </span>
@@ -151,7 +151,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+              <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg">
                 <span>
                   <FaCogs className='size-8 text-blue-800'/>
                 </span>
@@ -165,7 +165,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-md hover:scale-104 shadow-lg">
+              <div className="bg-black border border-gray-700 rounded-md transition-all hover:border-blue-500 px-8 py-8 flex flex-row gap-4 flex-1 min-w-0 hover:scale-104 shadow-lg">
                 <span>
                   <FaShoppingCart className='size-8 text-blue-800'/>
                 </span>
@@ -188,11 +188,11 @@ function App() {
           <h2 className='text-4xl font-bold text-white'>
             ¿Qué permite el sistema?
           </h2>
-          <div className='flex flex-row justify-center gap-15 mt-8'>
+          <div className='flex flex-row flex-wrap justify-center gap-15 mt-8'>
             <div className='flex flex-col justify-center gap-7'>
-              <div className='group flex justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
-                <span>
-                  <ShelvingUnit className='size-14 text-blue-500 transition-colors duration-300 group-hover:text-green-500 active:text-green-500'/>
+              <div className='flex justify-center'>
+                <span className='inline-flex transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
+                  <ShelvingUnit className='size-14 text-blue-500 transition-colors duration-300 hover:text-green-500 active:text-green-500'/>
                 </span>
               </div>
               <div className='flex flex-col gap-2'>
@@ -205,9 +205,9 @@ function App() {
               </div>
             </div>
             <div className='flex flex-col justify-center gap-7'>
-              <div className='group flex justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
-                <span>
-                  <NotebookPen className='size-14 text-blue-500 transition-colors duration-300 group-hover:text-green-500 active:text-green-500'/>
+              <div className='flex justify-center'>
+                <span className='inline-flex transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
+                  <NotebookPen className='size-14 text-blue-500 transition-colors duration-300 hover:text-green-500 active:text-green-500'/>
                 </span>
               </div>
               <div className='flex flex-col gap-2'>
@@ -220,9 +220,9 @@ function App() {
               </div>
             </div>
             <div className='flex flex-col justify-center gap-7'>
-              <div className='group flex justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
-                <span>
-                  <ChartNoAxesCombined className='size-14 text-blue-500 transition-colors duration-300 group-hover:text-green-500 active:text-green-500'/>
+              <div className='flex justify-center'>
+                <span className='inline-flex transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
+                  <ChartNoAxesCombined className='size-14 text-blue-500 transition-colors duration-300 hover:text-green-500 active:text-green-500'/>
                 </span>
               </div>
               <div className='flex flex-col gap-2'>
@@ -235,11 +235,11 @@ function App() {
               </div>
             </div>
           </div >
-          <div className='flex flex-row justify-center gap-15'>
+          <div className='flex flex-col md:flex-row justify-center gap-15 mt-8'>
             <div className='flex flex-col justify-center gap-7'>
-              <div className='group flex justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
-                <span>
-                  <Boxes className='size-14 text-blue-500 transition-colors duration-300 group-hover:text-green-500 active:text-green-500'/>
+              <div className='flex justify-center'>
+                <span className='inline-flex transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
+                  <Boxes className='size-14 text-blue-500 transition-colors duration-300 hover:text-green-500 active:text-green-500'/>
                 </span>
               </div>
               <div className='flex flex-col gap-2'>
@@ -252,9 +252,9 @@ function App() {
               </div>
             </div>
             <div className='flex flex-col justify-center gap-7'>
-              <div className='group flex justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
-                <span>
-                  <Store className='size-14 text-blue-500 transition-colors duration-300 group-hover:text-green-500 active:text-green-500'/>
+              <div className='flex justify-center'>
+                <span className='inline-flex transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
+                  <Store className='size-14 text-blue-500 transition-colors duration-300 hover:text-green-500 active:text-green-500'/>
                 </span>
               </div>
               <div className='flex flex-col gap-2'>
@@ -267,9 +267,9 @@ function App() {
               </div>
             </div>
             <div className='flex flex-col justify-center gap-7'>
-              <div className='group flex justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
-                <span>
-                  <Columns3Cog className='size-14 text-blue-500 transition-colors duration-300 group-hover:text-green-500 active:text-green-500'/>
+              <div className='flex justify-center'>
+                <span className='inline-flex transition-transform duration-300 hover:-translate-y-1 hover:scale-110 active:scale-100'>
+                  <Columns3Cog className='size-14 text-blue-500 transition-colors duration-300 hover:text-green-500 active:text-green-500'/>
                 </span>
               </div>
               <div className='flex flex-col gap-2'>
@@ -284,8 +284,8 @@ function App() {
           </div>
         </div>
 
-        <div id='beneficios' className='flex items-center justify-center px-38 py-12 gap-5'>
-          <div className='w-1/2 flex justify-center'>
+        <div id='beneficios' className='flex flex-col lg:flex-row items-center justify-center px-7 md:px-16 lg:px-38 py-12 gap-5'>
+          <div className='w-full lg:w-1/2 flex justify-center'>
               <img
                 src={Beneficio}
                 alt='Beneficios del sistema'
@@ -301,9 +301,9 @@ function App() {
             <h2 className='text-white text-4xl font-bold py-10'>
               Ventajas de la solución propuesta
             </h2>
-            <div className='text-white text-lg pace-y-4 flex flex-row gap-7 border-b border-white/30 pb-6'>
+            <div className='text-white text-lg mt-3 space-y-1 flex flex-col sm:flex-row gap-4 sm:gap-7 border-b border-white/30 pb-6'>
               <span>
-                <Icon icon="gcp:container-registry" className='size-24' />
+                <Icon icon="gcp:container-registry" className='size-16 sm:size-24' />
               </span>
               <div className='flex flex-col gap-1'>
                 <h3 className='text-2xl font-semibold text-blue-400'>
@@ -314,9 +314,9 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className='text-white text-lg mt-3 space-y-1 flex flex-row gap-7 border-b border-white/30 pb-6'>
+            <div className='text-white text-lg mt-3 space-y-1 flex flex-col sm:flex-row gap-4 sm:gap-7 border-b border-white/30 pb-6'>
               <span>
-                <Icon icon="gcp:gce-systems-management" className='size-24' />
+                <Icon icon="gcp:gce-systems-management" className='size-16 sm:size-24' />
               </span>
               <div className='flex flex-col gap-1'>
                 <h3 className='text-2xl font-semibold text-blue-400'>
@@ -327,9 +327,9 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className='text-white text-lg mt-3 space-y-1 flex flex-row gap-7 border-b border-white/30 pb-6'>
+            <div className='text-white text-lg mt-3 space-y-1 flex flex-col sm:flex-row gap-4 sm:gap-7 border-b border-white/30 pb-6'>
               <span>
-                <Icon icon="gcp:os-inventory-management" className='size-24' />
+                <Icon icon="gcp:os-inventory-management" className='size-16 sm:size-24' />
               </span>
               <div className='flex flex-col gap-1'>
                 <h3 className='text-2xl font-semibold text-blue-400'>
@@ -340,9 +340,9 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className='text-white text-lg mt-3 space-y-1 flex flex-row gap-7 border-b border-white/30 pb-6'>
+            <div className='text-white text-lg mt-3 space-y-1 flex flex-col sm:flex-row gap-4 sm:gap-7 border-b border-white/30 pb-6'>
               <span>
-                <Icon icon="gcp:cloud-deployment-manager" className='size-24' />
+                <Icon icon="gcp:cloud-deployment-manager" className='size-16 sm:size-24' />
               </span>
               <div className='flex flex-col gap-1'>
                 <h3 className='text-2xl font-semibold text-blue-400'>
@@ -353,9 +353,9 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className='text-white text-lg mt-3 space-y-1 flex flex-row gap-7 border-b border-white/30 pb-6'>
+            <div className='text-white text-lg mt-3 space-y-1 flex flex-col sm:flex-row gap-4 sm:gap-7 border-b border-white/30 pb-6'>
               <span>
-                <Icon icon="gcp:retail-api" className='size-24' />
+                <Icon icon="gcp:retail-api" className='size-16 sm:size-24' />
               </span>
               <div className='flex flex-col gap-1'>
                 <h3 className='text-2xl font-semibold text-blue-400'>
@@ -366,9 +366,9 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className='text-white text-lg mt-3 space-y-1 flex flex-row gap-7'>
+            <div className='text-white text-lg mt-3 space-y-1 flex flex-col sm:flex-row gap-4 sm:gap-7 border-b border-white/30 pb-6'>
               <span>
-                <Icon icon="gcp:cloud-optimization-ai-fleet-routing-api" className='size-24' />
+                <Icon icon="gcp:cloud-optimization-ai-fleet-routing-api" className='size-16 sm:size-24' />
               </span>
               <div className='flex flex-col gap-1'>
                 <h3 className='text-2xl font-semibold text-blue-400'>
@@ -382,7 +382,7 @@ function App() {
           </div>
         </div>
 
-        <footer className='mt-48 border-t border-gray-800 text-gray-300 sm:px-16 lg:px-24 py-30'>
+        <footer className='mt-48 border-t border-gray-800 text-gray-300 px-6 sm:px-16 lg:px-24 py-30'>
           <div className='mx-auto grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-3'>
             <div className='space-y-4'>
               <p className='text-sm font-semibold uppercase tracking-[0.3em] text-blue-400'>
