@@ -6,6 +6,7 @@ import { FaCogs, FaShoppingCart} from "react-icons/fa";
 import { BsCartX } from "react-icons/bs";
 import { ShelvingUnit, NotebookPen, ChartNoAxesCombined, Boxes, Store, Columns3Cog} from 'lucide-react'
 import { Icon } from '@iconify/react'
+import { Badge } from '@/components/ui/badge';
 
 function App() {
 
@@ -34,17 +35,25 @@ function App() {
               Controla tu inventario en tiempo real, registra ventas y anticipa la reposición de productos, integrando además ventas online.
             </p>
             <div className='flex flex-col lg:flex-row gap-4 justify-center items-center'>
-              <a href='#problematica' className='font-bold bg-blue-700 px-4 py-2 border-2 border-blue-700 rounded-md hover:bg-red-500 transition-all hover:scale-110 text-white shadow-lg'> {/*la a se usa para enlaces*/}
-                Problematica
+              <a href='#problematica' className='transition-all hover:scale-110'>
+                <Badge variant='default' shiny={true} className='font-bold bg-blue-700 px-4 py-2 border-2 border-blue-700 rounded-md hover:bg-red-300 transition-all hover:scale-110 text-white shadow-lg'>
+                  Problematica
+                </Badge>
               </a>
-              <a href='#solucion' className='font-medium border-blue-600 px-4 py-2 border-2 rounded-md hover:bg-blue-300 transition-all hover:scale-110 text-blue-500 shadow-lg'>
-                Soluciones
+              <a href='#solucion' className='transition-all hover:scale-110'>
+                <Badge variant='default' shiny={true} className='font-medium border-blue-600 px-4 py-2 border-2 rounded-md hover:bg-blue-300 transition-all hover:scale-110 text-blue-500 shadow-lg'>
+                  Soluciones
+                </Badge>
               </a>
-              <a href='#funcionalidades' className='font-bold bg-blue-700 px-4 py-2 border-2 border-blue-700 rounded-md hover:bg-green-300 transition-all hover:scale-110 text-white shadow-lg'> {/*la a se usa para enlaces*/}
-                Funcionalidades
+              <a href='#problematica' className='transition-all hover:scale-110'>
+                <Badge variant='default' shiny={true} className='font-bold bg-blue-700 px-4 py-2 border-2 border-blue-700 rounded-md hover:bg-green-300 transition-all hover:scale-110 text-white shadow-lg'>
+                  Funcionalidades
+                </Badge>
               </a>
-              <a href='#beneficios' className='font-medium border-blue-600 px-4 py-2 border-2 rounded-md hover:bg-yellow-300 transition-all hover:scale-110 text-blue-500 shadow-lg'>
-                Beneficios
+              <a href='#solucion' className='transition-all hover:scale-110'>
+                <Badge variant='default' shiny={true} className='font-medium border-blue-600 px-4 py-2 border-2 rounded-md hover:bg-yellow-300 transition-all hover:scale-110 text-blue-500 shadow-lg'>
+                  Beneficio
+                </Badge>
               </a>
             </div>
           </div>
